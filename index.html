@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- Normalize -->
+		<link rel="stylesheet" href="./css/normalize.css" />
+		<!-- Styles -->
+		<link rel="stylesheet" href="./scss/main.css" />
+		<link rel="stylesheet" href="./scss/styleglobal.scss" />
+		<!-- Goole Fonts -->
+		<link
+			rel="stylesheet"
+			href="https://fonts.google.com/specimen/Roboto#standard-styles"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap"
+			rel="stylesheet"
+		/>
+		<!-- Fontawesome -->
+		<script
+			src="https://kit.fontawesome.com/55f76b4603.js"
+			crossorigin="anonymous"
+		></script>
+
+		<title>Ohmyfood</title>
+	</head>
+	<body>
+		<!-- Loading -->
+		<!-- Components -->
+
+		<!-------------------- Header --------------------------->
+
+		<header class="header">
+			<img
+				class="header__logo"
+				src="images/logo/ohmyfood.png"
+				alt="logo_ohmyfood"
+			/>
+		</header>
+
+		<!------------- Formulaire Zone de recherche ----------->
+
+		<form class="form" action="#" method="post">
+			<div class="form__location_dot">
+				<i class="fas fa-map-marker-alt"></i>
+			</div>
+			<input
+				class="form__input"
+				type="search"
+				id="location_town"
+				placeholder="Paris, Belleville"
+			/>
+		</form>
+
+		<!-------------------- Main Body ----------------------->
+
+		<main class="main_body">
+			<!-------------------- Section Reservation ----------------------->
+
+			<section class="reservation">
+				<div class="reservation__container">
+					<h1 class="reservation__container__title">
+						Réservez le menu qui vous convient
+					</h1>
+					<p class="reservation__container__restaurants">
+						Découvrez des restaurants d'exception, sélectionnés par nos soins
+					</p>
+				</div>
+
+				<!--------------- button reservation ------------------->
+
+				<button class="reservation__button" type="button">
+					Explorer nos restaurants
+				</button>
+			</section>
+
+			<!--------------- Section Fonctionnement  ---------------------->
+
+			<div class="function">
+				<section class="function__section">
+					<div class="function__section__tag">
+						<h2 class="function__section__tag__title">Fonctionnement</h2>
+					</div>
+					<div class="function__section__container">
+						<div class="function__section__container__items">
+							<ul class="function__section__container__items__list">
+								<li class="function__section__container__items__list__number">
+									1
+								</li>
+								<i
+									class="fas fa-mobile-alt function__section__container__items__list__icon"
+								></i>
+								<p class="function__section__container__items__list__subtitle">
+									Choisissez un restaurant
+								</p>
+							</ul>
+						</div>
+						<div class="function__section__container__items">
+							<ul class="function__section__container__items__list">
+								<li class="function__section__container__items__list__number">
+									2
+								</li>
+								<i
+									class="fas fa-list-ul function__section__container__items__list__icon"
+								></i>
+								<p class="function__section__container__items__list__subtitle">
+									Composez votre menu
+								</p>
+							</ul>
+						</div>
+						<div class="function__section__container__items">
+							<ul class="function__section__container__items__list">
+								<li class="function__section__container__items__list__number">
+									3
+								</li>
+								<i
+									class="fas fa-store function__section__container__items__list__icon"
+								></i>
+								<p class="function__section__container__items__list__subtitle">
+									Dégustez au restaurant
+								</p>
+							</ul>
+						</div>
+					</div>
+				</section>
+			</div>
+
+			<!-- Restaurants Section -->
+
+			<section class="restaurants">
+				<div class="restaurants__container">
+					<div class="restaurants__container__tag">
+						<h2 class="restaurants__container__tag__title">Restaurants</h2>
+					</div>
+					<div class="restaurants__container__items">
+						<a href="lapalettedugout.html"
+							><!--Ce lien actif renvoi au menu de la palette du goût-->
+							<article class="restaurants__items">
+								<img
+									class="restaurants__items__image"
+									src="/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+									alt="Menilmontant"
+								/>
+								<div class="restaurants__items__info">
+									<div class="restaurants__items__info__text">
+										<h3 class="restaurants__items__title">
+											La palette du goût
+										</h3>
+										<p class="restaurants__items__name">Ménilmontant</p>
+									</div>
+									<div class="restaurants__items__heart"></div>
+								</div>
+								<div class="new__tag">Nouveau</div>
+							</article>
+						</a>
+
+						<a href="lanoteenchantee.html">
+							<article class="restaurants__items">
+								<img
+									class="restaurants__items__image"
+									src="/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
+									alt="Charonne"
+								/>
+								<div class="restaurants__items__info">
+									<div class="restaurants__items__info__text">
+										<h3 class="restaurants__items__title">La note enchantée</h3>
+										<p class="restaurants__items__name">Charonne</p>
+									</div>
+									<div class="restaurants__items__heart"></div>
+								</div>
+								<div class="new__tag">Nouveau</div>
+							</article>
+						</a>
+
+						<a href="alafrancaise.html">
+							<article class="restaurants__items">
+								<img
+									class="restaurants__items__image"
+									src="/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
+									alt="Cité Rouge"
+								/>
+								<div class="restaurants__items__info">
+									<div class="restaurants__items__info__text">
+										<h3 class="restaurants__items__title">A la française</h3>
+										<p class="restaurants__items__name">Cité Rouge</p>
+									</div>
+									<div class="restaurants__items__heart"></div>
+								</div>
+								<div class="new__tag">Nouveau</div>
+							</article>
+						</a>
+
+						<a href="ledelicedessens.html">
+							<article class="restaurants__items">
+								<img
+									class="restaurants__items__image"
+									src="/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
+									alt="Folie-Méricourt"
+								/>
+								<div class="restaurants__items__info">
+									<div class="restaurants__items__info__text">
+										<h3 class="restaurants__items__title">
+											Le délice des sens
+										</h3>
+										<p class="restaurants__items__name">Folie-Méricourt</p>
+									</div>
+									<div class="restaurants__items__heart"></div>
+								</div>
+								<div class="new__tag">Nouveau</div>
+							</article>
+						</a>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<!-- Footer Section -->
+
+		<footer class="footer">
+			<div class="footer__container">
+				<h4 class="footer__container__title">ohmyfood</h4>
+				<ul class="footer__container__title__list">
+					<li class="footer__container__title__list__items">
+						<img
+							class="footer__container__title__list__items__icons"
+							src="./images/icon/fork-knife.svg"
+							alt="fourchette"
+						/>
+						<p class="footer__container__title__list__items__icons__text">
+							Proposer un restaurant
+						</p>
+					</li>
+
+					<li class="footer__container__title__list__items">
+						<img
+							class="footer__container__title__list__items__icons"
+							src="./images/icon/shakehand.svg"
+							alt="main serrer"
+						/>
+						<p class="footer__container__title__list__items__icons__text">
+							Devenir partenaire
+						</p>
+					</li>
+
+					<li class="footer__container__title__list__items">
+						<p class="footer__container__title__list__items__icons__text">
+							Mentions légales
+						</p>
+					</li>
+
+					<li class="footer__container__title__list__items">
+						<a
+							class="footer__container__title__list__items__email"
+							href="mailto: someone@example.com"
+							>Contact</a
+						>
+					</li>
+				</ul>
+			</div>
+		</footer>
+	</body>
+</html>

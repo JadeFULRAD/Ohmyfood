@@ -1,0 +1,353 @@
+/*------------Variables-----------*/
+$medium: 600;
+$thin: 100;
+$tablet-screen: 768px;
+$desktop-screen: 992px;
+
+/* ----------- Elements principaux de la page --------- */
+
+* {
+	margin: 0;
+	box-sizing: border-box;
+	font-family: "Roboto", sans-serif;
+	font-weight: 900;
+}
+/*----------- Modification des propriétés par défaut ---------*/
+
+/*---------------------- Header ---------------------------------*/
+
+.subheading {
+	&__browsing {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		width: 100%;
+		height: 85px;
+		gap: 35px;
+		padding-top: 16px;
+		padding-left: 22px;
+
+		&__left {
+			&__icon {
+				color: #7e7e7e;
+				font-weight: 900;
+				width: 31px;
+				gap: 10px;
+
+				&__logo {
+					&__center {
+						width: 185px;
+					}
+				}
+			}
+		}
+	}
+}
+
+.view {
+	height: 100%;
+
+	&__container {
+		height: inherit;
+
+		&__backImage {
+			width: 100%;
+
+			@media (min-width: $tablet-screen) {
+				height: 230px;
+				object-fit: cover;
+			}
+		}
+	}
+
+	/*------------------Style -----------------*/
+
+	.menu {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		width: 100%;
+		background-color: #f6f6f6;
+		border-top-left-radius: 40px;
+		border-top-right-radius: 40px;
+		position: relative;
+		margin-top: -53px;
+
+		&__title {
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+			height: 100px;
+
+			&__text {
+				font-size: 30px;
+				font-family: "shrikhand";
+
+				&__icon {
+					&__heart {
+						background-image: url(/images/icon/heart-outline.svg);
+						width: 43px;
+						height: 43px;
+						transition: transform 0.4s ease-in-out;
+						background-repeat: no-repeat;
+
+						&:hover {
+							background-image: url("/images/icon/heart-linearGradient.svg");
+							transform: scale(1.2);
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.wrap__starter {
+	@media (min-width: $tablet-screen) {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		height: 100%;
+		width: 100%;
+		gap: 0.5rem;
+	}
+
+	@media (min-width:$desktop-screen){
+		flex-wrap: nowrap;
+	}
+
+	.starter {
+		padding: 0 1rem;
+		height: 100%;
+		padding-bottom: 34px;
+
+		&__items {
+			display: flex;
+			flex-direction: column;
+			gap: 16px;
+
+			&__title {
+				font-size: 14px;
+
+				&__text {
+					font-weight: $thin;
+					border-bottom: 3px solid #99e2d0;
+					width: 52px;
+				}
+			}
+
+			.dish {
+				display: flex;
+				border-radius: 15px;
+				background-color: #ffffff;
+				box-shadow: 0 2px 10px 0px rgb(0 0 0 / 20%);
+				cursor: pointer;
+				overflow: hidden;
+				animation: appear 0.8s both;
+
+				&:nth-of-type(1) {
+					animation-delay: 0s;
+				}
+
+				&:nth-of-type(2) {
+					animation-delay: 0.1s;
+				}
+
+				&:nth-of-type(3) {
+					animation-delay: 0.1s;
+				}
+
+				@keyframes appear {
+					from {
+						opacity: 0;
+						transform: translateY(50%);
+					}
+					to {
+						opacity: 1;
+						transform: translateY(0%);
+					}
+				}
+
+				&:hover > .dish__checkbox {
+					width: 0px;
+
+					@media (min-width: $tablet-screen) {
+						width: 80px;
+						transition: width 0.8s ease-in-out;
+					}
+
+					&:hover > .dish__checkbox__check {
+						animation: check 0.2s ease-in-out;
+					}
+					@keyframes check {
+						0% {
+							transform: rotate(0deg);
+						}
+
+						100% {
+							transform: rotate(360deg);
+						}
+					}
+				}
+
+				&__title {
+					display: flex;
+					justify-content: space-between;
+					width: 100%;
+					padding: 1rem;
+					gap: 5px;
+
+					&__text {
+						display: flex;
+						flex-direction: column;
+						width: 100%;
+						height: 100%;
+						gap: 5px;
+						text-overflow: ellipsis;
+						overflow: hidden;
+						white-space: nowrap;
+
+						& h3 {
+							font-size: 16px;
+							font-weight: $medium;
+						}
+
+						& p {
+							font-weight: $thin;
+							font-size: 16px;
+						}
+					}
+					.price {
+						font-size: 16px;
+						align-self: flex-end;
+					}
+				}
+				&__checkbox {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					position: relative;
+					background-color: #99e2d0;
+					overflow: hidden;
+					width: 0px;
+
+					&__check {
+						width: 30px;
+						height: 30px;
+						background-color: white;
+						border-radius: 50%;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+
+						&__icon {
+							font-weight: $medium;
+							font-size: 14px;
+							color: #99e2d0;
+						}
+					}
+				}
+			}
+
+			/*-------------------- Button reservation -----------------------*/
+		}
+		.order__button {
+			transform: translate(86px, 18px);
+			border-radius: 25px;
+			outline: none;
+			padding: 15px 25px;
+			border: none;
+			color: white;
+			font-size: 18px;
+			font-weight: 400;
+			background: linear-gradient(to bottom right, #ff79da, #9356dc);
+			box-shadow: 0px 2px 10px 0px rgb(0 0 0 / 30%);
+			cursor: pointer;
+			transition: all 400ms linear;
+
+			&:hover {
+				background: linear-gradient(to bottom right, #9356dc, #ff79da);
+				box-shadow: 0px 2px 10px 0px rgb(0 0 0 / 30%);
+			}
+
+			@media (min-width: $tablet-screen) {
+				transform: translate(400px, 18px);
+			}
+		}
+	}
+}
+
+/*--------------- Section Footer -------------------*/
+
+.footer {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	height: 200px;
+	padding: 25px;
+	background-color: #333;
+
+	@media (min-width: $tablet-screen) {
+		justify-content: center;
+	}
+
+	&__container {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+
+		@media (min-width: $tablet-screen) {
+			gap: 37px;
+		}
+
+		&__title {
+			font-family: Shrikhand;
+			color: white;
+			font-size: 24px;
+
+			@media (min-width: $tablet-screen) {
+				display: flex;
+				justify-content: center;
+			}
+
+			&__list {
+				display: flex;
+				flex-direction: column;
+				list-style-type: none;
+				color: white;
+				padding: 0px;
+				gap: 4px;
+
+				@media (min-width: $tablet-screen) {
+					flex-direction: row;
+					gap: 68px;
+				}
+
+				&__items {
+					display: flex;
+					font-size: 14px;
+					gap: 8px;
+
+					@media (min-width: $tablet-screen) {
+						align-items: center;
+					}
+
+					&__icons {
+						width: 16px;
+						height: 24px;
+
+						&__text {
+							font-weight: 400;
+						}
+					}
+
+					&__email {
+						text-decoration: none;
+						color: white;
+						font-weight: 400;
+					}
+				}
+			}
+		}
+	}
+}

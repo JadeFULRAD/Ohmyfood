@@ -1,0 +1,90 @@
+/* ----------- Elements principaux de la page --------- */
+
+* {
+	margin: 0;
+	box-sizing: border-box;
+	font-family: "Roboto", sans-serif;
+	font-weight: 900;
+}
+/*----------- Modification des propriétés par défaut ---------*/
+
+/*---------------------- Header ---------------------------------*/
+
+.subheading {
+	&__browsing {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		width: 100%;
+		height: 85px;
+		gap: 35px;
+		padding-top: 16px;
+		padding-left: 22px;
+
+		&__left {
+			&__icon {
+				color: #7e7e7e;
+				font-weight: 900;
+				width: 31px;
+				gap: 10px;
+
+				&__logo {
+					&__center {
+						width: 185px;
+					}
+				}
+			}
+		}
+	}
+}
+
+.view {
+	height: 100%;
+
+	&__container {
+		height: inherit;
+
+		&__backImage {
+			width: 100%;
+		}
+	}
+
+	.menu {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		width: 100%;
+		background-color: #f6f6f6;
+		border-top-left-radius: 40px;
+		border-top-right-radius: 40px;
+		position: relative;
+		margin-top: -53px;
+
+		&__title {
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+			height: 100px;
+
+			&__text {
+				font-size: 30px;
+				font-family: "shrikhand";
+
+				&__icon {
+					&__heart {
+						background-image: url(/images/icon/heart-outline.svg);
+						width: 43px;
+						height: 43px;
+						transition: transform 0.4s ease-in-out;
+
+						&:hover {
+							background-image: url("/images/icon/heart-linearGradient.svg");
+							transform: scale(1.2);
+						}
+					}
+				}
+			}
+		}
+	}
+}
+		

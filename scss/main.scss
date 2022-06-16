@@ -1,0 +1,432 @@
+/* ----------- Variables for Media Query --------- */
+
+$tablet-screen: 768px;
+$desktop-screen: 992px;
+
+/* ----------- Elements principaux de la page --------- */
+
+* {
+	margin: 0;
+	box-sizing: border-box;
+	font-family: "Roboto", sans-serif;
+	font-weight: 900;
+}
+
+/*----------- Modification des propriétés par défaut ---------*/
+a {
+	text-decoration: none;
+	color: black;
+}
+/*---------------------- Header ---------------------------------*/
+
+.header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: white;
+	box-shadow: 0px 0px 10px 0px grey;
+	height: 85px;
+	margin-bottom: 5px;
+	padding-top: 10px;
+
+	&__logo {
+		width: 200px;
+		height: 38px;
+	}
+}
+
+/*------------- Formulaire Zone de recherche ----------------------*/
+
+.form {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 60px;
+	background-color: #eeeeee;
+
+	&__location_dot {
+		font-size: 20px;
+		margin-right: 20px;
+	}
+
+	&__input {
+		border: none;
+		font-size: 20px;
+		width: 160px;
+		background-color: transparent;
+		font-weight: 500;
+		outline: none;
+	}
+}
+
+.main__body {
+	width: 100%;
+}
+
+/*-------------------- Section Reservation -----------------------*/
+
+.reservation {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	align-items: center;
+	background-color: #f7f7f7;
+	height: 280px;
+
+	&__container {
+		padding-top: 15px;
+
+		&__title {
+			font-weight: Bold;
+			font-size: 24px;
+			margin-bottom: 20px;
+		}
+
+		&__restaurants {
+			font-weight: 100;
+			padding: 0px 30px;
+			margin-bottom: 20px;
+		}
+	}
+
+	/*-------------------- Button reservation -----------------------*/
+
+	&__button {
+		border-radius: 25px;
+		outline: none;
+		padding: 15px 25px;
+		border: none;
+		color: white;
+		font-size: 18px;
+		background: linear-gradient(to bottom right, #ff79da, #9356dc);
+		box-shadow: 0px 2px 10px 0px rgb(0 0 0 / 30%);
+		cursor: pointer;
+		transition: all 400ms linear;
+
+		&:hover {
+			background: linear-gradient(to bottom right, #9356dc, #ff79da);
+			box-shadow: 0px 2px 10px 0px rgb(0 0 0 / 30%);
+		}
+	}
+}
+
+/*--------------- Function Section -------------------------*/
+.function {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: white;
+	padding: 19px;
+
+	@media (min-width: $desktop-screen) {
+		margin: 35px;
+	}
+
+	&__section {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		gap: 20px;
+
+		&__container {
+			display: flex;
+			flex-direction: column;
+			gap: 30px;
+
+			@media (min-width: $tablet-screen) {
+				flex-direction: row;
+			}
+			&__tag {
+				padding: 60px 0px 30px;
+
+				&__title {
+					font-size: 20px;
+				}
+			}
+
+			&__items {
+				display: flex;
+				align-items: center;
+				background-color: #f6f6f6;
+				border-radius: 20px;
+				width: 100%;
+				height: 65px;
+				box-shadow: 0px 2px 10px 0px rgb(0 0 0 / 20%);
+				transition: background-color 0.4s ease-in-out;
+
+				@media (min-width: $desktop-screen) {
+					height: 72px;
+				}
+
+				&:hover {
+					cursor: pointer;
+					background-color: #f4eefc;
+				}
+
+				&__list {
+					display: flex;
+					align-items: center;
+					list-style: none;
+					padding: 0px;
+
+					@media (min-width: $desktop-screen) {
+						gap: 7px;
+					}
+
+					&__number {
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						width: 25px;
+						height: 25px;
+						border-radius: 50%;
+						background-color: #9356dc;
+						color: white;
+						transform: translate(-50%);
+						font-weight: 400;
+					}
+					&__icon {
+						color: #7e7e7e;
+						font-size: 20px;
+						padding-left: 8px;
+						padding-right: 26px;
+						transition: color 0.4s ease-in-out;
+						&:hover {
+							color: #9356dc;
+						}
+
+						@media (min-width: $tablet-screen) {
+							padding-right: 15px;
+						}
+					}
+					&__subtitle {
+						font-size: 13px;
+						font-weight: 500;
+
+						@media (min-width: $tablet-screen) {
+							font-size: 17px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+/*--------------- Restaurants Section -------------------------*/
+
+.restaurants {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	background-color: #f6f6f6;
+	height: 100%;
+	padding: 22px;
+
+	@media (min-width: $tablet-screen) {
+		padding: 20px;
+	}
+
+	@media (min-width: $desktop-screen) {
+		padding: 35px;
+	}
+
+	&__container {
+		width: 100%;
+
+		&__tag {
+			padding-bottom: 25px;
+
+			@media (min-width: $tablet-screen) {
+				padding-bottom: 0px;
+			}
+
+			@media (min-width: $desktop-screen) {
+				padding-bottom: 10px;
+			}
+
+			&__title {
+				font-size: 20px;
+
+				@media (min-width: $desktop-screen) {
+					padding: 20px;
+				}
+			}
+		}
+		&__items {
+			display: flex;
+			flex-direction: column;
+			gap: 20px;
+
+			@media (min-width: $desktop-screen) {
+				flex-direction: row;
+			}
+		}
+	}
+}
+
+.restaurants__items {
+	display: flex;
+	flex-direction: column;
+	background-color: white;
+	border-radius: 12px;
+	height: 275px;
+	position: relative;
+	cursor: pointer;
+	overflow: hidden;
+	box-shadow: 0px 2px 10px 0px rgb(0 0 0 / 20%);
+
+	@media (min-width: $tablet-screen) {
+		height: 174px;
+		width: 100%;
+	}
+}
+
+.restaurants__items__image {
+	width: 100%;
+	height: 75%;
+	background-position: center;
+	object-fit: cover;
+
+	@media (min-width: $tablet-screen) {
+		height: 55%;
+	}
+}
+
+.restaurants__items__info {
+	display: flex;
+	padding: 13px;
+	align-items: center;
+
+	&__text {
+		display: flex;
+		justify-content: space-between;
+		flex-direction: column;
+		width: 100%;
+		height: 100%;
+	}
+}
+
+.restaurants__items__title {
+	font-weight: bold;
+	padding-bottom: 6px;
+
+	@media (min-width: $desktop-screen) {
+		font-size: 14px;
+	}
+}
+
+.restaurants__items__name {
+	font-weight: 300;
+
+	@media (min-width: $desktop-screen) {
+		font-size: 12px;
+	}
+}
+
+.new__tag {
+	width: 100px;
+	padding: 8px 12px;
+	text-align: center;
+	background-color: #99e2d0;
+	color: #008766;
+	font-size: 16px;
+	border-radius: 3px;
+	font-weight: 400;
+	position: absolute;
+	right: 13px;
+	top: 13px;
+}
+
+.restaurants__items__heart {
+	width: 43px;
+	height: 43px;
+	background-image: url("/images/icon/heart-outline.svg");
+	transition: transform 0.4s ease-in-out;
+	background-repeat: no-repeat;
+
+	&:hover {
+		background-image: url("/images/icon/heart-linearGradient.svg");
+		transform: scale(1.2);
+	}
+
+	@media (min-width: $desktop-screen) {
+		width: 50px;
+	}
+}
+
+/*--------------- Section Footer -------------------*/
+
+.footer {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	height: 200px;
+	padding: 25px;
+	background-color: #333;
+
+	@media (min-width: $tablet-screen) {
+		justify-content: center;
+	}
+
+	&__container {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+
+		@media (min-width: $tablet-screen) {
+			gap: 37px;
+		}
+
+		&__title {
+			font-family: Shrikhand;
+			color: white;
+			font-size: 24px;
+
+			@media (min-width: $tablet-screen) {
+				display: flex;
+				justify-content: center;
+			}
+
+			&__list {
+				display: flex;
+				flex-direction: column;
+				list-style-type: none;
+				color: white;
+				padding: 0px;
+				gap: 4px;
+
+				@media (min-width: $tablet-screen) {
+					flex-direction: row;
+					gap: 68px;
+				}
+
+				&__items {
+					display: flex;
+					font-size: 14px;
+					gap: 8px;
+
+					@media (min-width: $tablet-screen) {
+						align-items: center;
+					}
+
+					&__icons {
+						width: 16px;
+						height: 24px;
+
+						&__text {
+							font-weight: 400;
+						}
+					}
+
+					&__email {
+						text-decoration: none;
+						color: white;
+						font-weight: 400;
+					}
+				}
+			}
+		}
+	}
+}
