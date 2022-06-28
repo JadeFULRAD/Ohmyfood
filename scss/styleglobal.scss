@@ -2,7 +2,7 @@
 $medium: 600;
 $thin: 100;
 $tablet-screen: 768px;
-$desktop-screen: 992px;
+$desktop-screen: 1024px;
 
 /* ----------- Elements principaux de la page --------- */
 
@@ -65,19 +65,30 @@ $desktop-screen: 992px;
 	.menu {
 		display: flex;
 		flex-direction: column;
+		text-align: center;
 		height: 100%;
 		width: 100%;
 		background-color: #f6f6f6;
 		border-top-left-radius: 40px;
 		border-top-right-radius: 40px;
-		position: relative;
-		margin-top: -53px;
+		gap: 11px;
+		padding-bottom: 25px;
 
 		&__title {
 			display: flex;
 			justify-content: space-around;
 			align-items: center;
 			height: 100px;
+
+			@media (min-width: $tablet-screen) {
+				justify-content: space-between;
+				padding: 15px;
+			}
+
+			@media (min-width: $desktop-screen) {
+				justify-content: space-between;
+				padding: 15px;
+			}
 
 			&__text {
 				font-size: 30px;
@@ -89,6 +100,7 @@ $desktop-screen: 992px;
 						width: 43px;
 						height: 43px;
 						transition: transform 0.4s ease-in-out;
+						background-size: cover;
 						background-repeat: no-repeat;
 
 						&:hover {
@@ -101,7 +113,6 @@ $desktop-screen: 992px;
 		}
 	}
 }
-
 .wrap__starter {
 	@media (min-width: $tablet-screen) {
 		display: flex;
@@ -112,7 +123,7 @@ $desktop-screen: 992px;
 		gap: 0.5rem;
 	}
 
-	@media (min-width:$desktop-screen){
+	@media (min-width: $desktop-screen) {
 		flex-wrap: nowrap;
 	}
 
@@ -121,10 +132,15 @@ $desktop-screen: 992px;
 		height: 100%;
 		padding-bottom: 34px;
 
+		@media (min-width: $tablet-screen) {
+			padding: 0px;
+		}
+
 		&__items {
 			display: flex;
 			flex-direction: column;
 			gap: 16px;
+			padding-bottom: 15px;
 
 			&__title {
 				font-size: 14px;
@@ -138,7 +154,7 @@ $desktop-screen: 992px;
 
 			.dish {
 				display: flex;
-				border-radius: 15px;
+				border-radius: 0.5rem;
 				background-color: #ffffff;
 				box-shadow: 0 2px 10px 0px rgb(0 0 0 / 20%);
 				cursor: pointer;
@@ -193,6 +209,7 @@ $desktop-screen: 992px;
 				&__title {
 					display: flex;
 					justify-content: space-between;
+					text-align: left;
 					width: 100%;
 					padding: 1rem;
 					gap: 5px;
@@ -248,32 +265,33 @@ $desktop-screen: 992px;
 					}
 				}
 			}
-
-			/*-------------------- Button reservation -----------------------*/
 		}
-		.order__button {
-			transform: translate(86px, 18px);
-			border-radius: 25px;
-			outline: none;
-			padding: 15px 25px;
-			border: none;
-			color: white;
-			font-size: 18px;
-			font-weight: 400;
-			background: linear-gradient(to bottom right, #ff79da, #9356dc);
-			box-shadow: 0px 2px 10px 0px rgb(0 0 0 / 30%);
-			cursor: pointer;
-			transition: all 400ms linear;
+	}
+}
 
-			&:hover {
-				background: linear-gradient(to bottom right, #9356dc, #ff79da);
-				box-shadow: 0px 2px 10px 0px rgb(0 0 0 / 30%);
-			}
+/*-------------------- Button reservation -----------------------*/
 
-			@media (min-width: $tablet-screen) {
-				transform: translate(400px, 18px);
-			}
-		}
+.order__button {
+	border-radius: 25px;
+	outline: none;
+	padding: 15px 25px;
+	border: none;
+	color: white;
+	max-width: 200px;
+	font-size: 18px;
+	font-weight: 400;
+	background: linear-gradient(to bottom right, #ff79da, #9356dc);
+	box-shadow: 0px 2px 10px 0px rgb(0 0 0 / 30%);
+	cursor: pointer;
+	transition: all 400ms linear;
+	margin: auto;
+
+	&:hover {
+		background: linear-gradient(to bottom right, #9356dc, #ff79da);
+		box-shadow: 0px 2px 10px 0px rgb(0 0 0 / 30%);
+	}
+
+	@media (min-width: $tablet-screen) {
 	}
 }
 

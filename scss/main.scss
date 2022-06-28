@@ -79,7 +79,7 @@ a {
 
 		&__title {
 			font-weight: Bold;
-			font-size: 24px;
+			font-size: 20px;
 			margin-bottom: 20px;
 		}
 
@@ -129,6 +129,14 @@ a {
 		width: 100%;
 		gap: 20px;
 
+		&__tag {
+			padding: 60px 0px 30px;
+
+			&__title {
+				font-size: 20px;
+			}
+		}
+
 		&__container {
 			display: flex;
 			flex-direction: column;
@@ -137,14 +145,6 @@ a {
 			@media (min-width: $tablet-screen) {
 				flex-direction: row;
 			}
-			&__tag {
-				padding: 60px 0px 30px;
-
-				&__title {
-					font-size: 20px;
-				}
-			}
-
 			&__items {
 				display: flex;
 				align-items: center;
@@ -261,6 +261,7 @@ a {
 
 			@media (min-width: $desktop-screen) {
 				flex-direction: row;
+				justify-content: space-between;
 			}
 		}
 	}
