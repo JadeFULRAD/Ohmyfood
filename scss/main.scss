@@ -1,7 +1,7 @@
 /* ----------- Variables for Media Query --------- */
 
 $tablet-screen: 768px;
-$desktop-screen: 992px;
+$desktop-screen: 1024px;
 
 /* ----------- Elements principaux de la page --------- */
 
@@ -16,6 +16,87 @@ $desktop-screen: 992px;
 a {
 	text-decoration: none;
 	color: black;
+}
+
+/*-----------Loading ----------------*/
+.preloader {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	width: 100%;
+	visibility: hidden;
+	animation: animate 3s linear infinite;
+}
+
+@keyframes animate {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+.ring {
+	position: absolute;
+	width: 200px;
+	height: 200px;
+	border: 0px solid #000;
+	border-radius: 50%;
+}
+
+.ring:nth-child(1) {
+	border-bottom-width: 8px;
+	border-color: #ff79da;
+	animation: rotate1 2s linear infinite;
+}
+
+.ring:nth-child(2) {
+	border-right-width: 8px;
+	border-color: #9356dc;
+	animation: rotate2 2s linear infinite;
+}
+
+.ring:nth-child(3) {
+	border-left-width: 8px;
+	border-color: #99e2d0;
+	animation: rotate3 2s linear infinite;
+}
+
+.loading {
+	color: black;
+	font-weight: 800;
+	font-family: shrikhand;
+}
+
+@keyframes rotate1 {
+	0% {
+		transform: rotatex(35deg) rotatey(-45deg) rotatez(0deg);
+	}
+	100% {
+		transform: rotatex(35deg) rotatey(-45deg) rotatez(360deg);
+	}
+}
+
+@keyframes rotate2 {
+	0% {
+		transform: rotatex(50deg) rotatey(10deg) rotatez(0deg);
+	}
+	100% {
+		transform: rotatex(50deg) rotatey(10deg) rotatez(360deg);
+	}
+}
+
+@keyframes rotate3 {
+	0% {
+		transform: rotatex(35deg) rotatey(55deg) rotatez(0deg);
+	}
+	100% {
+		transform: rotatex(35deg) rotatey(55deg) rotatez(360deg);
+	}
 }
 /*---------------------- Header ---------------------------------*/
 
@@ -131,6 +212,10 @@ a {
 
 		&__tag {
 			padding: 60px 0px 30px;
+
+			@media (min-width: $desktop-screen) {
+				padding: 0px;
+			}
 
 			&__title {
 				font-size: 20px;
@@ -282,6 +367,11 @@ a {
 		height: 174px;
 		width: 100%;
 	}
+
+	@media (min-width: $desktop-screen) {
+		height: 180px;
+		width: 221px;
+	}
 }
 
 .restaurants__items__image {
@@ -341,19 +431,21 @@ a {
 }
 
 .restaurants__items__heart {
-	width: 43px;
+	width: 49px;
 	height: 43px;
+	color: #fff;
+	cursor: pointer;
 	background-image: url("/images/icon/heart-outline.svg");
-	transition: transform 0.4s ease-in-out;
+	transition: all 0.4s ease-in-out;
 	background-repeat: no-repeat;
 
 	&:hover {
 		background-image: url("/images/icon/heart-linearGradient.svg");
-		transform: scale(1.2);
+		color: #ff79da, #9356dc;
 	}
 
 	@media (min-width: $desktop-screen) {
-		width: 50px;
+		
 	}
 }
 
