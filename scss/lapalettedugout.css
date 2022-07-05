@@ -63,9 +63,11 @@
   background-image: url(/images/icon/heart-outline.svg);
   width: 43px;
   height: 43px;
-  transition: transform 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .view .menu__title__text__icon__heart:hover {
   background-image: url("/images/icon/heart-linearGradient.svg");
-  transform: scale(1.2);
+  color: #ff79da, #9356dc;
 }/*# sourceMappingURL=lapalettedugout.css.map */
