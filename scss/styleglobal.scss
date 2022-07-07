@@ -1,3 +1,5 @@
+@import './main.scss';
+
 /*------------Variables-----------*/
 $medium: 600;
 $thin: 100;
@@ -97,8 +99,8 @@ $desktop-screen: 991px;
 				&__icon {
 					&__heart {
 						background-image: url(/images/icon/heart-outline.svg);
-						width: 43px;
-						height: 43px;
+						width: 49px;
+						height: 20px;
 						transition: all 0.4s ease-in-out;
 						background-size: cover;
 						background-repeat: no-repeat;
@@ -165,24 +167,24 @@ $desktop-screen: 991px;
 				box-shadow: 0 2px 10px 0px rgb(0 0 0 / 20%);
 				cursor: pointer;
 				overflow: hidden;
-				animation: appear 1s ease-in-out forwards;
+				animation: appear 1s linear forwards;
 
 				&:nth-of-type(1) {
 					animation-delay: 0.1s;
 				}
 
 				&:nth-of-type(2) {
-					animation-delay: 0.3s;
+					animation-delay: 0.2s;
 				}
 
 				&:nth-of-type(3) {
-					animation-delay: 0.5s;
+					animation-delay: 0.3s;
 				}
 
 				@keyframes appear {
 					from {
 						opacity: 0;
-						transform: translateY(30px);
+						transform: translateY(18%);
 					}
 					to {
 						opacity: 1;
@@ -192,6 +194,7 @@ $desktop-screen: 991px;
 
 				&:hover > .dish__checkbox {
 					width: 80px;
+					transition: width 0.8s ease-in-out;
 
 					@media (min-width: $tablet-screen) {
 						width: 80px;

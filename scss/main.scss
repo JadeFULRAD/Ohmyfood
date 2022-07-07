@@ -24,12 +24,13 @@ a {
 	justify-content: center;
 	align-items: center;
 	position: fixed;
-	background-color: #fff;
+	background-color: rgba(255, 255, 255, 1);
 	height: 100vh;
 	width: 100%;
 	animation: animate 3s forwards;
 	animation-delay: 0s;
 	z-index: 10;
+	inset: 0;
 }
 
 @keyframes animate {
@@ -37,8 +38,9 @@ a {
 		opacity: 0;
 	}
 	100% {
-		opacity: 1;
+		opacity: 2;
 		visibility: hidden;
+		
 	}
 }
 
@@ -435,7 +437,7 @@ a {
 
 .restaurants__items__heart {
 	width: 49px;
-	height: 43px;
+	height: 20px;
 	color: #fff;
 	cursor: pointer;
 	background-image: url("/images/icon/heart-outline.svg");
