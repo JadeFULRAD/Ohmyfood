@@ -119,10 +119,10 @@ $desktop-screen: 991px;
 	@media (min-width: $tablet-screen) {
 		display: flex;
 		flex-wrap: wrap;
-		justify-content: space-around;
+		justify-content: center;
 		height: 100%;
 		width: 100%;
-		gap: 0.5rem;
+		gap: 24px;
 	}
 
 	@media (min-width: $desktop-screen) {
@@ -167,7 +167,12 @@ $desktop-screen: 991px;
 				box-shadow: 0 2px 10px 0px rgb(0 0 0 / 20%);
 				cursor: pointer;
 				overflow: hidden;
+				max-width: 300px;
 				animation: appear 1s linear forwards;
+
+				@media (min-width: 1440px){
+					max-width: 400px;
+				}
 
 				&:nth-of-type(1) {
 					animation-delay: 0.1s;

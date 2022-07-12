@@ -20,34 +20,98 @@ a {
   justify-content: center;
   align-items: center;
   position: fixed;
-  background-color: rgb(255, 255, 255);
-  height: 100vh;
-  width: 100%;
-  -webkit-animation: animate 3s forwards;
-          animation: animate 3s forwards;
-  -webkit-animation-delay: 0s;
-          animation-delay: 0s;
-  z-index: 10;
+  height: 0vh;
+  width: 0%;
+  -webkit-animation: animate 3s linear;
+          animation: animate 3s linear;
+  z-index: 3;
   inset: 0;
+  opacity: 0;
+  margin: auto;
 }
 
+.background {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: rgb(255, 255, 255);
+  inset: 0;
+  margin: auto;
+  z-index: 2;
+  -webkit-animation: background 3s linear;
+          animation: background 3s linear;
+  visibility: hidden;
+}
+
+@-webkit-keyframes background {
+  0% {
+    opacity: 1;
+    width: 100%;
+    height: 100vh;
+    visibility: visible;
+  }
+  50% {
+    opacity: 1;
+    width: 100%;
+    height: 100vh;
+    visibility: visible;
+  }
+  99% {
+    opacity: 0;
+  }
+  100% {
+    visibility: hidden;
+  }
+}
+
+@keyframes background {
+  0% {
+    opacity: 1;
+    width: 100%;
+    height: 100vh;
+    visibility: visible;
+  }
+  50% {
+    opacity: 1;
+    width: 100%;
+    height: 100vh;
+    visibility: visible;
+  }
+  99% {
+    opacity: 0;
+  }
+  100% {
+    visibility: hidden;
+  }
+}
 @-webkit-keyframes animate {
   0% {
-    opacity: 0;
+    opacity: 1;
+    width: 100%;
+    height: 100vh;
+  }
+  50% {
+    opacity: 1;
+    width: 100%;
+    height: 100vh;
   }
   100% {
-    opacity: 2;
-    visibility: hidden;
+    opacity: 0;
   }
 }
-
 @keyframes animate {
   0% {
-    opacity: 0;
+    opacity: 1;
+    width: 100%;
+    height: 100vh;
+  }
+  50% {
+    opacity: 1;
+    width: 100%;
+    height: 100vh;
   }
   100% {
-    opacity: 2;
-    visibility: hidden;
+    opacity: 0;
   }
 }
 .ring {
