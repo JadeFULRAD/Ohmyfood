@@ -760,9 +760,13 @@ a {
   box-shadow: 0 2px 10px 0px rgba(0, 0, 0, 0.2);
   cursor: pointer;
   overflow: hidden;
-  max-width: 300px;
   -webkit-animation: appear 1s linear forwards;
           animation: appear 1s linear forwards;
+}
+@media (min-width: 991px) {
+  .wrap__starter .starter__items .dish {
+    max-width: 300px;
+  }
 }
 @media (min-width: 1440px) {
   .wrap__starter .starter__items .dish {
