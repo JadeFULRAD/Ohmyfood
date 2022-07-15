@@ -384,7 +384,7 @@ $desktop-screen: 991px;
 				list-style-type: none;
 				color: white;
 				padding: 0px;
-				gap: 4px;
+				gap: 8px;
 
 				@media (min-width: $tablet-screen) {
 					flex-direction: row;
