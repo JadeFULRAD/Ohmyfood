@@ -58,7 +58,7 @@ a {
 		height: 100vh;
 		visibility: visible;
 	}
-	99%{
+	99% {
 		opacity: 0;
 	}
 	100% {
@@ -88,7 +88,6 @@ a {
 	height: 200px;
 	border: 0px solid #000;
 	border-radius: 50%;
-	
 }
 
 .ring:nth-child(1) {
@@ -253,9 +252,10 @@ a {
 		flex-direction: column;
 		width: 100%;
 		gap: 20px;
+		padding-bottom: 50px;
 
 		&__tag {
-			padding: 60px 0px 30px;
+			padding: 37px 0px 30px;
 
 			@media (min-width: $desktop-screen) {
 				padding: 0px;
@@ -351,7 +351,7 @@ a {
 	align-items: center;
 	background-color: #f6f6f6;
 	height: 100%;
-	padding: 22px;
+	padding: 66px 22px 69px 22px;
 
 	@media (min-width: $tablet-screen) {
 		padding: 20px;

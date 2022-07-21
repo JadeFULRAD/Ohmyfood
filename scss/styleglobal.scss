@@ -234,6 +234,12 @@ $desktop-screen: 991px;
 					overflow: hidden;
 					white-space: nowrap;
 
+					@media (min-width: $tablet-screen) {
+						text-overflow: ellipsis;
+						overflow: hidden;
+						white-space: nowrap;
+					}
+
 					@media (min-width: $desktop-screen) {
 						text-overflow: ellipsis;
 						overflow: hidden;
@@ -250,6 +256,12 @@ $desktop-screen: 991px;
 						overflow: hidden;
 						white-space: nowrap;
 
+						@media (min-width: $tablet-screen) {
+							text-overflow: ellipsis;
+							overflow: hidden;
+							white-space: nowrap;
+						}
+
 						@media (min-width: $desktop-screen) {
 							text-overflow: ellipsis;
 							overflow: hidden;
@@ -262,6 +274,12 @@ $desktop-screen: 991px;
 							text-overflow: ellipsis;
 							overflow: hidden;
 							white-space: nowrap;
+
+							@media (min-width: $tablet-screen) {
+								text-overflow: ellipsis;
+								overflow: hidden;
+								white-space: nowrap;
+							}
 
 							@media (min-width: $desktop-screen) {
 								text-overflow: ellipsis;
@@ -276,6 +294,12 @@ $desktop-screen: 991px;
 							text-overflow: ellipsis;
 							overflow: hidden;
 							white-space: nowrap;
+
+							@media (min-width: $tablet-screen) {
+								text-overflow: ellipsis;
+								overflow: hidden;
+								white-space: nowrap;
+							}
 
 							@media (min-width: $desktop-screen) {
 								text-overflow: ellipsis;
