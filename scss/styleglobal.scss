@@ -169,6 +169,20 @@ $desktop-screen: 991px;
 				overflow: hidden;
 				animation: appear 1s linear forwards;
 
+				&:hover .dish__checkbox__check__icon {
+					animation: check 0.5s ease-in-out;
+
+					@keyframes check {
+						0% {
+							transform: rotate(0deg);
+						}
+
+						100% {
+							transform: rotate(360deg);
+						}
+					}
+				}
+
 				@media (min-width: 991px) {
 					max-width: 300px;
 				}
@@ -207,19 +221,6 @@ $desktop-screen: 991px;
 					@media (min-width: $tablet-screen) {
 						width: 80px;
 						transition: width 0.8s ease-in-out;
-					}
-
-					&:hover > .dish__checkbox__check {
-						animation: check 0.2s ease-in-out;
-					}
-					@keyframes check {
-						0% {
-							transform: rotate(0deg);
-						}
-
-						100% {
-							transform: rotate(360deg);
-						}
 					}
 				}
 
