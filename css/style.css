@@ -470,12 +470,12 @@ a {
   height: 43px;
   color: #fff;
   cursor: pointer;
-  background-image: url("/images/icon/heart-outline.svg");
+  background-image: url("../images/icon/heart-outline.svg");
   transition: all 0.7s ease-in-out;
   background-repeat: no-repeat;
 }
 .restaurants__items__heart:hover {
-  background-image: url("/images/icon/heart-linearGradient.svg");
+  background-image: url("../images/icon/heart-linearGradient.svg");
   color: #ff79da, #9356dc;
 }
 
@@ -1095,12 +1095,12 @@ a {
   height: 43px;
   color: #fff;
   cursor: pointer;
-  background-image: url("/images/icon/heart-outline.svg");
+  background-image: url("../images/icon/heart-outline.svg");
   transition: all 0.7s ease-in-out;
   background-repeat: no-repeat;
 }
 .restaurants__items__heart:hover {
-  background-image: url("/images/icon/heart-linearGradient.svg");
+  background-image: url("../images/icon/heart-linearGradient.svg");
   color: #ff79da, #9356dc;
 }
 
